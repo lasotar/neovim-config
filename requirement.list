@@ -1,2 +1,3 @@
 base-devel, glibc for C programming
 ripgrep
+lldb for debugging

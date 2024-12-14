@@ -71,7 +71,24 @@ require("lazy").setup({
         config = function()
             require("plugins.treesitter").setup()
         end,
+  },
+  -- Debugger
+{
+    "mfussenegger/nvim-dap",
+    dependencies = {
+        { "rcarriga/nvim-dap-ui" },
+        { "theHamsta/nvim-dap-virtual-text" },
+        { "nvim-telescope/telescope-dap.nvim" },
+        { "williamboman/mason.nvim" },
+        { "jay-babu/mason-nvim-dap.nvim" },
+        { "julianolf/nvim-dap-lldb" },
+        { "leoluz/nvim-dap-go" },
+        { "nvim-neotest/nvim-nio" },
     },
+    config = function()
+        require("plugins.debugger").setup()
+    end,
+},
 })
 
 -- load language servers
